@@ -1,0 +1,4 @@
+
+# Keep upstream snapshots byte-identical, including signed transport scripts.
+native/openflux/upstream/** -whitespace
+*.sig binary

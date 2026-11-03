@@ -1,0 +1,634 @@
+[
+  {
+    "module": "filippo.io/edwards25519",
+    "version": "v1.2.0",
+    "notices": [
+      "third_party/network/go-modules/filippo.io/edwards25519@v1.2.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/andybalholm/brotli",
+    "version": "v1.0.6",
+    "notices": [
+      "third_party/network/go-modules/github.com/andybalholm/brotli@v1.0.6/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/andybalholm/brotli",
+    "version": "v1.2.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/andybalholm/brotli@v1.2.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/armon/go-socks5",
+    "version": "v0.0.0-20160902184237-e75332964ef5",
+    "notices": [
+      "third_party/network/go-modules/github.com/armon/go-socks5@v0.0.0-20160902184237-e75332964ef5/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2",
+    "version": "v1.40.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2@v1.40.0/LICENSE.txt",
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2@v1.40.0/NOTICE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/config",
+    "version": "v1.32.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/config@v1.32.1/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/credentials",
+    "version": "v1.19.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/credentials@v1.19.1/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/feature/ec2/imds",
+    "version": "v1.18.14",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/feature/ec2/imds@v1.18.14/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/internal/configsources",
+    "version": "v1.4.14",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/internal/configsources@v1.4.14/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/internal/endpoints/v2",
+    "version": "v2.7.14",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/internal/endpoints/v2@v2.7.14/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/internal/ini",
+    "version": "v1.8.4",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/internal/ini@v1.8.4/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding",
+    "version": "v1.13.3",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding@v1.13.3/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/service/internal/presigned-url",
+    "version": "v1.13.14",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/service/internal/presigned-url@v1.13.14/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/service/signin",
+    "version": "v1.0.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/service/signin@v1.0.1/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/service/sqs",
+    "version": "v1.42.16",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/service/sqs@v1.42.16/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/service/sso",
+    "version": "v1.30.4",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/service/sso@v1.30.4/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/service/ssooidc",
+    "version": "v1.35.9",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/service/ssooidc@v1.35.9/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/aws-sdk-go-v2/service/sts",
+    "version": "v1.41.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/aws-sdk-go-v2/service/sts@v1.41.1/LICENSE.txt"
+    ]
+  },
+  {
+    "module": "github.com/aws/smithy-go",
+    "version": "v1.23.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/aws/smithy-go@v1.23.2/LICENSE",
+      "third_party/network/go-modules/github.com/aws/smithy-go@v1.23.2/NOTICE"
+    ]
+  },
+  {
+    "module": "github.com/bdandy/go-errors",
+    "version": "v1.2.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/bdandy/go-errors@v1.2.2/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/bdandy/go-socks4",
+    "version": "v1.2.3",
+    "notices": [
+      "third_party/network/go-modules/github.com/bdandy/go-socks4@v1.2.3/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/bogdanfinn/fhttp",
+    "version": "v0.6.8",
+    "notices": [
+      "third_party/network/go-modules/github.com/bogdanfinn/fhttp@v0.6.8/LICENSE-Go"
+    ]
+  },
+  {
+    "module": "github.com/bogdanfinn/quic-go-utls",
+    "version": "v1.0.9-utls",
+    "notices": [
+      "third_party/network/go-modules/github.com/bogdanfinn/quic-go-utls@v1.0.9-utls/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/bogdanfinn/tls-client",
+    "version": "v1.15.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/bogdanfinn/tls-client@v1.15.1/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/bogdanfinn/utls",
+    "version": "v1.7.7-barnius",
+    "notices": [
+      "third_party/network/go-modules/github.com/bogdanfinn/utls@v1.7.7-barnius/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/bogdanfinn/websocket",
+    "version": "v1.5.5-barnius",
+    "notices": [
+      "third_party/network/go-modules/github.com/bogdanfinn/websocket@v1.5.5-barnius/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/cbeuw/connutil",
+    "version": "v1.0.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/cbeuw/connutil@v1.0.1/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/dchest/siphash",
+    "version": "v1.2.3",
+    "notices": [
+      "third_party/network/go-modules/github.com/dchest/siphash@v1.2.3/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/golang/mock",
+    "version": "v1.6.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/golang/mock@v1.6.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/google/btree",
+    "version": "v1.1.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/google/btree@v1.1.2/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/google/uuid",
+    "version": "v1.6.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/google/uuid@v1.6.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/klauspost/compress",
+    "version": "v1.18.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/klauspost/compress@v1.18.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/klauspost/compress",
+    "version": "v1.18.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/klauspost/compress@v1.18.2/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/klauspost/cpuid/v2",
+    "version": "v2.2.6",
+    "notices": [
+      "third_party/network/go-modules/github.com/klauspost/cpuid/v2@v2.2.6/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/klauspost/reedsolomon",
+    "version": "v1.12.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/klauspost/reedsolomon@v1.12.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/miekg/dns",
+    "version": "v1.1.65",
+    "notices": [
+      "third_party/network/go-modules/github.com/miekg/dns@v1.1.65/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/patrickmn/go-cache",
+    "version": "v2.1.0+incompatible",
+    "notices": [
+      "third_party/network/go-modules/github.com/patrickmn/go-cache@v2.1.0+incompatible/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/datachannel",
+    "version": "v1.6.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/datachannel@v1.6.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/dtls/v3",
+    "version": "v3.1.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/dtls/v3@v3.1.2/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/dtls/v3",
+    "version": "v3.1.5",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/dtls/v3@v3.1.5/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/ice/v4",
+    "version": "v4.2.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/ice/v4@v4.2.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/interceptor",
+    "version": "v0.1.43",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/interceptor@v0.1.43/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/logging",
+    "version": "v0.2.4",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/logging@v0.2.4/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/mdns/v2",
+    "version": "v2.1.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/mdns/v2@v2.1.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/randutil",
+    "version": "v0.1.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/randutil@v0.1.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/rtcp",
+    "version": "v1.2.16",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/rtcp@v1.2.16/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/rtp",
+    "version": "v1.10.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/rtp@v1.10.1/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/sctp",
+    "version": "v1.9.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/sctp@v1.9.2/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/sdp/v3",
+    "version": "v3.0.17",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/sdp/v3@v3.0.17/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/srtp/v3",
+    "version": "v3.0.10",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/srtp/v3@v3.0.10/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/stun/v3",
+    "version": "v3.1.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/stun/v3@v3.1.1/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/stun/v3",
+    "version": "v3.1.6",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/stun/v3@v3.1.6/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/transport/v4",
+    "version": "v4.0.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/transport/v4@v4.0.1/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/transport/v4",
+    "version": "v4.0.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/transport/v4@v4.0.2/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/turn/v4",
+    "version": "v4.1.4",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/turn/v4@v4.1.4/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/turn/v5",
+    "version": "v5.0.12",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/turn/v5@v5.0.12/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pion/webrtc/v4",
+    "version": "v4.2.3-securityfix",
+    "notices": [
+      "third_party/network/go-modules/github.com/pion/webrtc/v4@v4.2.3-securityfix/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/pkg/errors",
+    "version": "v0.9.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/pkg/errors@v0.9.1/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/quic-go/qpack",
+    "version": "v0.6.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/quic-go/qpack@v0.6.0/LICENSE.md"
+    ]
+  },
+  {
+    "module": "github.com/realclientip/realclientip-go",
+    "version": "v1.0.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/realclientip/realclientip-go@v1.0.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/refraction-networking/utls",
+    "version": "v1.8.2",
+    "notices": [
+      "third_party/network/go-modules/github.com/refraction-networking/utls@v1.8.2/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/tam7t/hpkp",
+    "version": "v0.0.0-20160821193359-2b70b4024ed5",
+    "notices": [
+      "third_party/network/go-modules/github.com/tam7t/hpkp@v0.0.0-20160821193359-2b70b4024ed5/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/theodorsm/covert-dtls",
+    "version": "v1.5.0",
+    "notices": [
+      "third_party/network/go-modules/github.com/theodorsm/covert-dtls@v1.5.0/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/tjfoc/gmsm",
+    "version": "v1.4.1",
+    "notices": [
+      "third_party/network/go-modules/github.com/tjfoc/gmsm@v1.4.1/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/txthinking/runnergroup",
+    "version": "v0.0.0-20210608031112-152c7c4432bf",
+    "notices": [
+      "third_party/network/go-modules/github.com/txthinking/runnergroup@v0.0.0-20210608031112-152c7c4432bf/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/txthinking/socks5",
+    "version": "v0.0.0-20251011041537-5c31f201a10e",
+    "notices": [
+      "third_party/network/go-modules/github.com/txthinking/socks5@v0.0.0-20251011041537-5c31f201a10e/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/wlynxg/anet",
+    "version": "v0.0.5",
+    "notices": [
+      "third_party/network/go-modules/github.com/wlynxg/anet@v0.0.5/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/xtaci/kcp-go/v5",
+    "version": "v5.6.24",
+    "notices": [
+      "third_party/network/go-modules/github.com/xtaci/kcp-go/v5@v5.6.24/LICENSE"
+    ]
+  },
+  {
+    "module": "github.com/xtaci/smux",
+    "version": "v1.5.56",
+    "notices": [
+      "third_party/network/go-modules/github.com/xtaci/smux@v1.5.56/LICENSE"
+    ]
+  },
+  {
+    "module": "gitlab.com/yawning/edwards25519-extra",
+    "version": "v0.0.0-20231005122941-2149dcafc266",
+    "notices": [
+      "third_party/network/go-modules/gitlab.com/yawning/edwards25519-extra@v0.0.0-20231005122941-2149dcafc266/LICENSE"
+    ]
+  },
+  {
+    "module": "gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/goptlib",
+    "version": "v1.6.0",
+    "notices": [
+      "third_party/network/go-modules/gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/goptlib@v1.6.0/COPYING"
+    ]
+  },
+  {
+    "module": "gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/ptutil",
+    "version": "v0.0.0-20250815012447-418f76dcf315",
+    "notices": [
+      "third_party/network/go-modules/gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/ptutil@v0.0.0-20250815012447-418f76dcf315/LICENSE"
+    ]
+  },
+  {
+    "module": "gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/v2",
+    "version": "v2.14.1",
+    "notices": [
+      "third_party/network/go-modules/gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/snowflake/v2@v2.14.1/LICENSE"
+    ]
+  },
+  {
+    "module": "gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/webtunnel",
+    "version": "v0.0.7",
+    "notices": [
+      "third_party/network/go-modules/gitlab.torproject.org/tpo/anti-censorship/pluggable-transports/webtunnel@v0.0.7/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/crypto",
+    "version": "v0.51.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/crypto@v0.51.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/crypto",
+    "version": "v0.54.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/crypto@v0.54.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/crypto",
+    "version": "v0.57.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/crypto@v0.57.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/net",
+    "version": "v0.53.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/net@v0.53.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/net",
+    "version": "v0.57.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/net@v0.57.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/net",
+    "version": "v0.59.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/net@v0.59.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/sys",
+    "version": "v0.44.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/sys@v0.44.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/sys",
+    "version": "v0.47.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/sys@v0.47.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/sys",
+    "version": "v0.48.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/sys@v0.48.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/text",
+    "version": "v0.40.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/text@v0.40.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/text",
+    "version": "v0.42.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/text@v0.42.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/time",
+    "version": "v0.10.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/time@v0.10.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.org/x/time",
+    "version": "v0.14.0",
+    "notices": [
+      "third_party/network/go-modules/golang.org/x/time@v0.14.0/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.zx2c4.com/wireguard",
+    "version": "v0.0.0-20250521234502-f333402bd9cb",
+    "notices": [
+      "third_party/network/go-modules/golang.zx2c4.com/wireguard@v0.0.0-20250521234502-f333402bd9cb/LICENSE"
+    ]
+  },
+  {
+    "module": "golang.zx2c4.com/wireguard",
+    "version": "v0.0.0-20260522210424-ecfc5a8d5446",
+    "notices": [
+      "third_party/network/go-modules/golang.zx2c4.com/wireguard@v0.0.0-20260522210424-ecfc5a8d5446/LICENSE"
+    ]
+  },
+  {
+    "module": "gvisor.dev/gvisor",
+    "version": "v0.0.0-20250503011706-39ed1f5ac29c",
+    "notices": [
+      "third_party/network/go-modules/gvisor.dev/gvisor@v0.0.0-20250503011706-39ed1f5ac29c/LICENSE"
+    ]
+  }
+]

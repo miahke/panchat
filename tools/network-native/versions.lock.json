@@ -1,0 +1,19 @@
+{
+  "base": "20501fdfe0d56c7705c377d4a263b01d8f38eeeb",
+  "qwdtt": "a296c57eaba69bb9479a24f9157856490890e47d",
+  "lyrebird": "362a60bb4e3fa434130ef81a9990d83d6d8eaea5",
+  "arti": "ba421ece1acb47e5c554c2bfa043cc9156451bab",
+  "go": "1.27.3",
+  "rust": "1.95.0",
+  "cargo_ndk": "4.1.2",
+  "android_ndk": "27.3.13750724",
+  "min_api": 29,
+  "target_api": 37,
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86_64",
+    "x86"
+  ],
+  "qwdtt_raw_protocol": 2
+}

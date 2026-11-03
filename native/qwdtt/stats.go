@@ -1,0 +1,48 @@
+package main
+
+import (
+	"fmt"
+	"log"
+	"sync/atomic"
+	"time"
+)
+
+type Stats struct {
+	TotalBytesUp      atomic.Int64
+	TotalBytesDown    atomic.Int64
+	ActiveConnections atomic.Int32
+}
+
+func NewStats() *Stats {
+	return &Stats{}
+}
+
+func (s *Stats) RunLoop(shutdown <-chan struct{}) {
+	ticker := time.NewTicker(3 * time.Second)
+	defer ticker.Stop()
+
+	for {
+		select {
+		case <-shutdown:
+			return
+		case <-ticker.C:
+			active := s.ActiveConnections.Load()
+			up := s.TotalBytesUp.Load()
+			down := s.TotalBytesDown.Load()
+			emitMobileStatistics(int64(active), up, down)
+			totalMB := float64(up+down) / (1024.0 * 1024.0)
+			upMB := float64(up) / (1024.0 * 1024.0)
+			downMB := float64(down) / (1024.0 * 1024.0)
+
+			log.Printf("[СТАТИСТИКА] Активных: %d | Трафик: %.2f МБ | ↓%.2f МБ / ↑%.2f МБ", active, totalMB, downMB, upMB)
+		}
+	}
+}
+
+// Fixed numeric records reuse upstream worker/traffic counters, without log strings.
+func emitMobileStatistics(workers, up, down int64) {
+	if !mobileProtocolActive || workers < 0 || workers > 2 || up < 0 || down < 0 {
+		return
+	}
+	fmt.Fprintf(protocolOutput, "STATS:%d:%d:%d\n", workers, up, down)
+}
