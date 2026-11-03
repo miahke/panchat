@@ -40,8 +40,8 @@ android {
         applicationId = "com.bitchat.transport"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 53
-        versionName = "2.2.0-panchat.2"
+        versionCode = 54
+        versionName = "2.2.0-panchat.3"
         buildConfigField(
             "String",
             "GITHUB_RELEASE_CERT_SHA256",
@@ -241,7 +241,7 @@ dependencies {
 tasks.withType<org.gradle.api.tasks.testing.Test>().configureEach {
     if (providers.gradleProperty("networkUiTests").orNull != "true") {
         exclude("**/NetworkWorkspaceButtonsTest*", "**/NetworkWorkspaceVisualTest*",
-            "**/NetworkSettingsColdStartTest*", "**/MessagesListFollowTest*", "**/QwdttAdminScreenTest*", "**/PanchatVisualTest*")
+            "**/NetworkSettingsColdStartTest*", "**/MessagesListFollowTest*", "**/QwdttAdminScreenTest*", "**/PanchatVisualTest*", "**/PanchatContent*Test*")
     }
     systemProperty(
         "robolectric.dependency.repo.url",

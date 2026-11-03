@@ -1469,6 +1469,10 @@ class ChatViewModel(
         // Every stage that wipes data at rest reports here. The success message is a
         // security assurance, so it requires all of them, not just the conversation database.
         var wipeComplete = true
+        try { com.bitchat.android.content.ContentPreferences.clear(getApplication()) }
+        catch (_: Exception) { wipeComplete = false }
+        try { com.bitchat.android.content.ChatReadingPreferences.clear(getApplication()) }
+        catch (_: Exception) { wipeComplete = false }
         try { com.bitchat.android.net.route.NetworkRuntime.wipe() }
         catch (_: Exception) { wipeComplete = false }
 

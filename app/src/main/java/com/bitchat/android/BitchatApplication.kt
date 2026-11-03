@@ -50,6 +50,8 @@ class BitchatApplication : Application() {
 
         // Restore the spam filter toggle before transports start admitting public messages
         com.bitchat.android.spam.SpamFilterPreferences.init(this)
+        com.bitchat.android.content.ContentPreferences.init(this)
+        com.bitchat.android.content.ChatReadingPreferences.init(this)
 
         // Initialize theme preference
         ThemePreferenceManager.init(this)

@@ -1,0 +1,17 @@
+<resources>
+    <string name="content_preview_hidden">Сообщение закрыто фильтром</string>
+    <string name="chat_reading_font">Размер текста сообщений</string>
+    <string name="chat_reading_time">Время сообщений в 24-часовом формате</string>
+    <string name="content_settings_title">Фильтры содержимого</string>
+    <string name="content_settings_summary">Слов и фраз: %1$d · показ изображений</string>
+    <string name="content_settings_explanation">Совпавшие сообщения закрываются плашкой, а не удаляются. Нажмите на плашку, чтобы прочитать. Уведомления о совпавших входящих сообщениях отключаются. Фильтр проверяет текст и имена; ваши исходящие сообщения остаются видимыми.</string>
+    <string name="content_settings_words">Одно слово или фраза на строку</string>
+    <string name="content_settings_limits">До 100 фраз по 128 символов. Без учёта регистра, без регулярных выражений.</string>
+    <string name="content_settings_images">Скрывать входящие картинки до нажатия</string>
+    <string name="content_settings_invalid">Слишком много фраз или фраза длиннее 128 символов.</string>
+    <string name="content_settings_save">Сохранить</string>
+    <string name="content_hidden_message">Сообщение закрыто фильтром · нажмите для показа</string>
+    <string name="content_hidden_image">Изображение скрыто · нажмите для показа</string>
+    <string name="nym_modified_notice">Самостоятельный модифицированный клиент на основе Bitchat с адаптациями из Nymchat. Исходные лицензии компонентов сохранены.</string>
+    <string name="panchat_corresponding_source">Исходники и инструкции сборки</string>
+</resources>

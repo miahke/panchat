@@ -1,0 +1,17 @@
+<resources>
+    <string name="content_preview_hidden">Message covered by filter</string>
+    <string name="chat_reading_font">Message text size</string>
+    <string name="chat_reading_time">24-hour message timestamps</string>
+    <string name="content_settings_title">Content filters</string>
+    <string name="content_settings_summary">Words and phrases: %1$d · image visibility</string>
+    <string name="content_settings_explanation">Matching messages are covered, not deleted. Tap a covered message to reveal it. Matching incoming notifications are suppressed. Rules apply to text and sender names; your outgoing messages remain visible.</string>
+    <string name="content_settings_words">One word or phrase per line</string>
+    <string name="content_settings_limits">Up to 100 literal phrases, 128 characters each. Case insensitive.</string>
+    <string name="content_settings_images">Hide received images until tapped</string>
+    <string name="content_settings_invalid">Too many phrases or a phrase exceeds 128 characters.</string>
+    <string name="content_settings_save">Save</string>
+    <string name="content_hidden_message">Message covered by filter · tap to reveal</string>
+    <string name="content_hidden_image">Image hidden · tap to reveal</string>
+    <string name="nym_modified_notice">Independent modified client based on Bitchat, with adaptations from Nymchat. Original component licenses are retained.</string>
+    <string name="panchat_corresponding_source">Source code and build instructions</string>
+</resources>

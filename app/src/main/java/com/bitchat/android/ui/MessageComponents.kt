@@ -49,6 +49,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.derivedStateOf
@@ -435,8 +436,52 @@ fun MessageItem(
     onImageClick: ((String, List<String>, Int) -> Unit)? = null,
     modifier: Modifier = Modifier
 ) {
+    val options by com.bitchat.android.content.ContentPreferences.options.collectAsState()
+    // Sender nicknames are user-controlled: only a matching local peer ID exempts a message.
+    val own = message.senderPeerID != null && message.senderPeerID == meshService.myPeerID
+    val localNotice = com.bitchat.android.spam.SpamFilter.isLocalNotice(message)
+    val filtered = !own && !localNotice && options.rules.matches(
+        if (message.type == BitchatMessageType.Message) message.content else "", message.sender)
+    val coveredImage = !own && options.hideImages && message.type == BitchatMessageType.Image
+    val reading by com.bitchat.android.content.ChatReadingPreferences.options.collectAsState()
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    CompositionLocalProvider(androidx.compose.ui.platform.LocalDensity provides
+        androidx.compose.ui.unit.Density(density.density, density.fontScale * reading.fontPercent / 100f)) {
+    com.bitchat.android.ui.content.MessageVisibilityGate(
+        identity = listOf(message.id, options),
+        hidden = filtered || coveredImage,
+        label = stringResource(if (filtered) R.string.content_hidden_message else R.string.content_hidden_image),
+        modifier = modifier,
+    ) {
+        MessageItemContent(message, currentUserNickname, meshService, messages,
+            mentionPeerIdentities, showSender, bubbles, spamVerdict, topSpacing,
+            onNicknameClick, onMessageLongPress, onCancelTransfer, onImageClick, modifier)
+    }
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun MessageItemContent(
+    message: BitchatMessage,
+    currentUserNickname: String,
+    meshService: MeshService,
+    messages: List<BitchatMessage> = emptyList(),
+    mentionPeerIdentities: Map<String, PeerIdentity> = emptyMap(),
+    showSender: Boolean = true,
+    bubbles: Boolean = false,
+    /** Set when the spam filter's debug bypass let this message through; tints the row red. */
+    spamVerdict: SpamVerdict? = null,
+    topSpacing: Dp = 0.dp,
+    onNicknameClick: ((String) -> Unit)? = null,
+    onMessageLongPress: ((BitchatMessage) -> Unit)? = null,
+    onCancelTransfer: ((BitchatMessage) -> Unit)? = null,
+    onImageClick: ((String, List<String>, Int) -> Unit)? = null,
+    modifier: Modifier = Modifier
+) {
     val colorScheme = MaterialTheme.colorScheme
-    val timeFormatter = remember { SimpleDateFormat(CHAT_TIMESTAMP_PATTERN, Locale.getDefault()) }
+    val reading by com.bitchat.android.content.ChatReadingPreferences.options.collectAsState()
+    val timeFormatter = remember(reading.use24Hour) { SimpleDateFormat(reading.timePattern, Locale.getDefault()) }
     val spamModifier = if (spamVerdict != null) {
         Modifier
             .background(colorScheme.error.copy(alpha = 0.18f), RoundedCornerShape(8.dp))

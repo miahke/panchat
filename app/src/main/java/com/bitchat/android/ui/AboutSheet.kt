@@ -381,6 +381,9 @@ fun AboutSheet(
                         item(key = "how_to_use") {
                             AboutHowToUseSection()
                         }
+                        item(key = "panchat_legal") {
+                            com.bitchat.android.ui.content.PanchatLegalNotices()
+                        }
                     }
 
                     if (selectedTab == AboutTab.Settings) {
@@ -427,6 +430,7 @@ fun AboutSheet(
                                         )
                                     }
                                     com.bitchat.android.ui.theme.ThemeAccentPicker()
+                                    com.bitchat.android.ui.content.ChatReadingSettings()
                                     Row(
                                         modifier = Modifier.fillMaxWidth(),
                                         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -603,6 +607,9 @@ fun AboutSheet(
                                         color = colorScheme.outlineVariant
                                     )
 
+                                    com.bitchat.android.ui.content.ContentSettingsRow()
+                                    HorizontalDivider(modifier = Modifier.padding(start = 56.dp),
+                                        color = colorScheme.outline.copy(alpha = 0.12f))
                                     ModSettingsRow(onClick = {
                                         context.startActivity(android.content.Intent(context,
                                             com.bitchat.android.ui.network.NetworkSettingsActivity::class.java))

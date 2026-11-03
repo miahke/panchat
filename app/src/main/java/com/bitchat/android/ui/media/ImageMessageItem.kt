@@ -59,9 +59,11 @@ fun ImageMessageItem(
     val bmp = remember(path) { try { android.graphics.BitmapFactory.decodeFile(path) } catch (_: Exception) { null } }
 
     // Collect all image paths from messages for swipe navigation
-    val imagePaths = remember(messages) {
-        messages.filter { it.type == BitchatMessageType.Image }
-            .map { it.content.trim() }
+    val contentOptions by com.bitchat.android.content.ContentPreferences.options.collectAsState()
+    val imagePaths = remember(messages, contentOptions, path) {
+        // A neighboring image has not been explicitly revealed. Never bypass its cover by swiping.
+        if (contentOptions.hideImages || contentOptions.rules.keywords.isNotEmpty()) listOf(path)
+        else messages.filter { it.type == BitchatMessageType.Image }.map { it.content.trim() }
     }
     val haptic = LocalHapticFeedback.current
 

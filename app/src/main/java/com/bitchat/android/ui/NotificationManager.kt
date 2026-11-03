@@ -68,6 +68,12 @@ class NotificationManager(
         private val liveManagers: MutableSet<NotificationManager> =
             Collections.newSetFromMap(WeakHashMap<NotificationManager, Boolean>())
 
+        /** Remove old notification previews when the user changes their content rules. */
+        fun clearForContentFilterChange() {
+            val managers = synchronized(liveManagers) { liveManagers.toList() }
+            managers.forEach { it.clearAllNotifications() }
+        }
+
         /**
          * Synchronizes notification action receivers with every manager instance in this process.
          * Without this, an old in-memory MessagingStyle history could reappear on the next DM.
@@ -180,6 +186,7 @@ class NotificationManager(
      * Show a notification for a private message with proper grouping and state awareness
      */
     fun showPrivateMessageNotification(senderPeerID: String, senderNickname: String, messageContent: String) {
+        if (com.bitchat.android.content.ContentPreferences.matches(messageContent, senderNickname)) return
         val conversationID = ContactDirectory.canonicalConversationId(senderPeerID)
         if (conversationPreferences.isMuted(conversationID)) {
             Log.d(TAG, "Skipping muted conversation notification")
@@ -511,6 +518,7 @@ class NotificationManager(
         isFirstMessage: Boolean = false,
         locationName: String? = null
     ) {
+        if (com.bitchat.android.content.ContentPreferences.matches(messageContent, senderNickname)) return
         // Only show notifications if app is in background OR user is not viewing this specific geohash
         val shouldNotify = isAppInBackground || (!isAppInBackground && currentGeohash != geohash)
 
@@ -732,6 +740,7 @@ class NotificationManager(
         messageContent: String,
         senderPeerID: String? = null
     ) {
+        if (com.bitchat.android.content.ContentPreferences.matches(messageContent, senderNickname)) return
         // Only show notifications if app is in background OR user is not viewing mesh chat
         // User is viewing mesh chat when: not in private chat AND not in geohash chat
         val isViewingMeshChat = currentPrivateChatPeer == null && currentGeohash == null

@@ -1146,11 +1146,15 @@ private fun ConversationRow(
         isWifiAware = isWifiAware,
         isDirect = isDirect
     )
+    val contentOptions by com.bitchat.android.content.ContentPreferences.options.collectAsState()
+    val filteredPreview = !conversation.latestMessageIsOutgoing && contentOptions.rules.matches(
+        conversation.latestMessagePreview, conversation.displayName)
     val basePreview = when {
         !conversation.draft.isNullOrBlank() -> stringResource(
             R.string.conversation_draft_preview,
             conversation.draft
         )
+        filteredPreview -> stringResource(R.string.content_preview_hidden)
         conversation.latestMessageType == BitchatMessageType.Image ->
             stringResource(R.string.notification_sent_image)
         conversation.latestMessageType == BitchatMessageType.Audio ->
