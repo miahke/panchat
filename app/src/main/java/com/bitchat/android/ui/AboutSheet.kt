@@ -603,15 +603,10 @@ fun AboutSheet(
                                         color = colorScheme.outlineVariant
                                     )
 
-                                    Button(onClick = {
+                                    ModSettingsRow(onClick = {
                                         context.startActivity(android.content.Intent(context,
                                             com.bitchat.android.ui.network.NetworkSettingsActivity::class.java))
-                                    }, modifier = Modifier.fillMaxWidth().heightIn(min = 76.dp)) {
-                                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                            Text("Настройки мода", style = MaterialTheme.typography.titleMedium)
-                                            Text("Tor · qWDTT · сервер и подписки", style = MaterialTheme.typography.bodySmall)
-                                        }
-                                    }
+                                    })
 
                                     HorizontalDivider(
                                         modifier = Modifier.padding(start = 56.dp),

@@ -76,7 +76,7 @@ class PanchatVisualTest {
                             RouteSnapshot(route = NetworkRoute.VK, state = BackendState.READY),
                             log.events.value,
                         )
-                        Button({}) { Text("Настройки мода") }
+                        com.bitchat.android.ui.ModSettingsRow({})
                     }
                 }
             }

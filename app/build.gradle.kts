@@ -40,8 +40,8 @@ android {
         applicationId = "com.bitchat.transport"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 52
-        versionName = "2.2.0-panchat.1"
+        versionCode = 53
+        versionName = "2.2.0-panchat.2"
         buildConfigField(
             "String",
             "GITHUB_RELEASE_CERT_SHA256",
